@@ -18,7 +18,8 @@ public class OutputService {
     }
 
     public void generateOutput(){
-        String output = timeService.getCurrentTime() + " " + greetingService.getGreeting(name);
+        Integer greetingCount = greetingService.getGreetingCount();
+        String output = timeService.getCurrentTime() + " " + greetingService.getGreeting(name, greetingCount);
         System.out.println(output);
     }
 
